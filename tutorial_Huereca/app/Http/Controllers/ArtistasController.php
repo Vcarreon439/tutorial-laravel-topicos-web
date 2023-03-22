@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artistas;
-use GuzzleHttp\Psr7\Response;
 use Illuminate\Http\Request;
 
 class ArtistasController extends Controller
@@ -11,11 +10,11 @@ class ArtistasController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()   
+    public function index()
     {
         //
         $datos = 'Catálogo de Artistas';
-        return view('welcome', compact('datos'));
+        return view('welcome');
     }
 
     /**

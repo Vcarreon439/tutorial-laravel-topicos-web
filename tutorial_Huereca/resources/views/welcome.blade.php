@@ -3,5 +3,4 @@
 @section('workspace')
  <h1>Hola Ejemplo</h1>
  <p>Este es un parrafo</p>
-    {{print_r($datos)}}
 @endsection
