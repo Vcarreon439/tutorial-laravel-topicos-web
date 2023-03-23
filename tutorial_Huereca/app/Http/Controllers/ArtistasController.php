@@ -23,6 +23,7 @@ class ArtistasController extends Controller
     public function create()
     {
         //
+        return response("Aqui se crean los artistas");
     }
 
     /**
@@ -47,6 +48,7 @@ class ArtistasController extends Controller
     public function edit(Artistas $artistas)
     {
         //
+        return response("Aqui se editan los artistas");
     }
 
     /**
