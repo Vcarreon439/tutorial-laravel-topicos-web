@@ -13,8 +13,8 @@ class ArtistasController extends Controller
     public function index()
     {
         //
-        $datos = 'Catálogo de Artistas';
-        return view('welcome');
+        $datos = Artistas::all();
+        return view('welcome', compact('datos'));
     }
 
     /**
