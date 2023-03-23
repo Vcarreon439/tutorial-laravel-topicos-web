@@ -23,7 +23,7 @@ class ArtistasController extends Controller
     public function create()
     {
         //
-        return response("Aqui se crean los artistas");
+        return response(view('frmArtistas'));
     }
 
     /**
