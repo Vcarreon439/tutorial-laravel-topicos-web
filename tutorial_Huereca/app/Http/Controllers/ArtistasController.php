@@ -48,7 +48,7 @@ class ArtistasController extends Controller
     public function edit(Artistas $artistas)
     {
         //
-        return response("Aqui se editan los artistas");
+        return response(view('editArtista'));
     }
 
     /**

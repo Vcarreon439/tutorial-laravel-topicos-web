@@ -1,9 +1,9 @@
 @extends('layout.interno')
-@section('title', 'EAgregar Artista')
+@section('title', 'Editar Artista')
 @section('workspace')
 <div class="card">
     <div class="card-header">
-        Agregar Artista
+        Editar Artista
     </div>
     <div class="card-body">
         <p class="card-text">
@@ -24,7 +24,7 @@
                 <br>
 
                 <a href="{{route('artistas.index')}}" class="btn btn-secondary">Regresar</a>
-                <button class="btn btn-primary">Agregar</button>
+                <button class="btn btn-primary">Editar</button>
 
             </form>
         </p>
