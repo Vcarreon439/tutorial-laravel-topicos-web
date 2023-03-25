@@ -14,7 +14,7 @@ class ArtistasController extends Controller
     {
         //
         $datos = Artistas::all();
-        return view('welcome', compact('datos'));
+        return view('inicio', compact('datos'));
     }
 
     /**
@@ -53,10 +53,11 @@ class ArtistasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Artistas $artistas)
+    public function edit(int $id)
     {
         //
-        return response(view('editArtista'));
+        $artista = Artistas::find($id);
+        return response(view('editArtista',compact('artista')));
     }
 
     /**
@@ -65,6 +66,13 @@ class ArtistasController extends Controller
     public function update(Request $request, Artistas $artistas)
     {
         //
+        $artista = Artistas::find($request->id);
+        $artista->nombre = $request->nombre;
+        $artista->paterno = $request->paterno;
+        $artista->materno = $request->materno;
+        $artista->resena = $request->resena;
+        $artista->save();
+        return redirect()->route('artistas.index')->with('success', 'Artista actualizado correctamente');
     }
 
     /**

@@ -7,19 +7,20 @@
     </div>
     <div class="card-body">
         <p class="card-text">
-            <form action="#">
+            <form method="POST">
             @csrf
+            @method('PUT')
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" required>
+                <input type="text" name="nombre" class="form-control" value="{{$artista->nombre}}" required>
 
                 <label for="paterno">A. Paterno</label>
-                <input type="text" name="paterno" class="form-control" required>
+                <input type="text" name="paterno" class="form-control" value="{{$artista->paterno}}" required>
 
                 <label for="materno">A. Materno</label>
-                <input type="text" name="materno" class="form-control" required>
+                <input type="text" name="materno" class="form-control" value="{{$artista->materno}}" required>
 
                 <label for="resena">Reseña</label>
-                <textarea name="resena" id="resena" class="form-control" rows="3"></textarea>
+                <textarea name="resena" id="resena" class="form-control" rows="3">{{$artista->resena}}</textarea>
 
                 <br>
 

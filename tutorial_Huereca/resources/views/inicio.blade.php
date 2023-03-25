@@ -42,7 +42,7 @@
                         <td>{{$artista->paterno}}</td>
                         <td>{{$artista->materno}}</td>
                         <td>{{$artista->resena}}</td>
-                        <td style="text-align: center;"><a href=""><i class="bi bi-pencil"></i></a></td>
+                        <td style="text-align: center;"><a href="{{url("/edit/{$artista->id}")}}"><i class="bi bi-pencil"></i></a></td>
                         <td style="text-align: center;"><a href=""><i class="bi bi-trash"></i></a></td>
                     </tr>
                     @endforeach
