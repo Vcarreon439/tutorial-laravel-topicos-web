@@ -7,6 +7,17 @@
         CRUD de Artistas con Laravel y MySQL
     </div>
     <div class="card-body">
+
+        <div class="row">
+            <div class="col-sm-12">
+                @if(session('mensaje'))
+                <div class="alert alert-success">
+                    {{session('mensaje')}}
+                </div>
+                @endif
+            </div>
+        </div>
+
         <h5 class="card-tittle">Lista de Artistas</h5>
         <a href="{{route('artistas.create')}}" class="btn btn-primary">Agregar Artista</a>
         <p class="card-text">

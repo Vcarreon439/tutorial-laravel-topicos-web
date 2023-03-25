@@ -32,6 +32,13 @@ class ArtistasController extends Controller
     public function store(Request $request)
     {
         //
+        $artista = new Artistas();
+        $artista->nombre = $request->nombre;
+        $artista->paterno = $request->paterno;
+        $artista->materno = $request->materno;
+        $artista->resena = $request->resena;
+        $artista->save();
+        return redirect()->route('artistas.index')->with('success', 'Artista agregado correctamente');
     }
 
     /**

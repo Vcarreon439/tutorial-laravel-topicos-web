@@ -7,7 +7,7 @@
     </div>
     <div class="card-body">
         <p class="card-text">
-            <form action="#">
+            <form action="{{route('artistas.store')}}" method="POST">
             @csrf
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" class="form-control" required>

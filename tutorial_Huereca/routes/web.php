@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ArtistasController::class, 'index'])->name('artistas.index');
 Route::get('/create',[ArtistasController::class, 'create'])->name('artistas.create');
+
+Route::post('/store',[ArtistasController::class, 'store'])->name('artistas.store');
+
 Route::get('/edit',[ArtistasController::class, 'edit'])->name('artistas.edit');
 Route::get('/show',[ArtistasController::class, 'show'])->name('artistas.show');
