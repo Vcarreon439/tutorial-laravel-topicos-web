@@ -44,10 +44,11 @@ class ArtistasController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Artistas $artistas)
+    public function show(int $id)
     {
         //
-        return response(view('deleteArtista'));
+        $artista = Artistas::find($id);
+        return response(view('deleteArtista',compact('artista')));
     }
 
     /**
@@ -63,7 +64,7 @@ class ArtistasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Artistas $artistas)
+    public function update(Request $request)
     {
         //
         $artista = Artistas::find($request->id);
@@ -78,8 +79,11 @@ class ArtistasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Artistas $artistas)
+    public function destroy(int $id)
     {
         //
+        $artistas = Artistas::find($id);
+        $artistas->delete();
+        return redirect()->route('artistas.index')->with('success', 'Artista eliminado correctamente');
     }
 }

@@ -23,16 +23,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$artista->id}}</td>
+                        <td>{{$artista->nombre}}</td>
+                        <td>{{$artista->paterno}}</td>
+                        <td>{{$artista->materno}}</td>
+                        <td>{{$artista->resena}}</td>
                     </tr>
                 </tbody>
             </table>
             <hr>
-            <form action="">
+            <form action="{{url("/destroy/{$artista->id}")}}" method="POST">
+                @csrf
+                @method('DELETE')
                 <a href="{{route('artistas.index')}}" class="btn btn-secondary">Regresar</a>
                 <button class="btn btn-danger">Eliminar</button>
             </form>

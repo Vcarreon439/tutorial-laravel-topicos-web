@@ -19,4 +19,5 @@ Route::get('/create',[ArtistasController::class, 'create'])->name('artistas.crea
 Route::post('/store',[ArtistasController::class, 'store'])->name('artistas.store');
 Route::get('/edit/{id}',[ArtistasController::class, 'edit'])->where('id', '[0-9]+')->name('artistas.edit');
 Route::put('/edit/{id}',[ArtistasController::class, 'update'])->where('id', '[0-9]+')->name('artistas.update');
-Route::get('/show',[ArtistasController::class, 'show'])->name('artistas.show');
+Route::get('/show/{id}',[ArtistasController::class, 'show'])->where('id', '[0-9]+')->name('artistas.show');
+Route::delete('/destroy/{id}',[ArtistasController::class, 'destroy'])->where('id', '[0-9]+')->name('artistas.destroy');
