@@ -1,8 +1,8 @@
 @extends('layout.interno')
-@section('title', 'Ejemplo de Bootstrap')
+@section('title', 'Lista de Artistas')
 @section('workspace')
 
-<div class="card">
+<div class="card mt-2">
     <div class="card-header">
         CRUD de Artistas con Laravel y MySQL
     </div>
@@ -31,8 +31,8 @@
                         <td>{{$artista->paterno}}</td>
                         <td>{{$artista->materno}}</td>
                         <td>{{$artista->resena}}</td>
-                        <td></td>
-                        <td></td>
+                        <td style="text-align: center;"><a href=""><i class="bi bi-pencil"></i></a></td>
+                        <td style="text-align: center;"><a href=""><i class="bi bi-trash"></i></a></td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -40,9 +40,5 @@
         </p>
     </div>
 </div>
-
- <h1>Hola Ejemplo</h1>
- <p>Este es un parrafo</p>
- <a href="{{route('artistas.create')}}">Agregar</a>
 @endsection
 
