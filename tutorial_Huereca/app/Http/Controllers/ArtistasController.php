@@ -40,6 +40,7 @@ class ArtistasController extends Controller
     public function show(Artistas $artistas)
     {
         //
+        return response(view('deleteArtista'));
     }
 
     /**
